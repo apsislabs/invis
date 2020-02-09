@@ -271,6 +271,28 @@ $spacing_48: $spacing_base * 12 !default;
 $spacing_56: $spacing_base * 14 !default;
 $spacing_64: $spacing_base * 16 !default;
 
+$spacings: (
+  "": $spacing_base,
+  "0": $spacing_0,
+  "1": $spacing_1,
+  "2": $spacing_2,
+  "3": $spacing_3,
+  "4": $spacing_4,
+  "5": $spacing_5,
+  "6": $spacing_6,
+  "8": $spacing_8,
+  "10": $spacing_10,
+  "12": $spacing_12,
+  "16": $spacing_16,
+  "20": $spacing_20,
+  "24": $spacing_24,
+  "32": $spacing_32,
+  "40": $spacing_40,
+  "48": $spacing_48,
+  "56": $spacing_56,
+  "64": $spacing_64
+) !default;
+
 // Border Widths
 $border_width_base: 1px !default;
 $border_width_sm: $border_width_base * 0.5 !default;

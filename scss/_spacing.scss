@@ -1,0 +1,55 @@
+@each $spacer, $size in $spacings {
+  $p_name: p;
+  $m_name: m;
+
+  @if $spacer != "" {
+    $p_name: p_#{$spacer};
+    $m_name: m_#{$spacer};
+  }
+
+  %#{$p_name} {
+    padding: $size;
+  }
+
+  %#{$m_name} {
+    margin: $size;
+  }
+
+  @if $output_classes {
+    .#{$p_name} {
+      @extend %#{$p_name};
+    }
+
+    .#{$m_name} {
+      @extend %#{$m_name};
+    }
+  }
+
+  @each $cls, $dir in $directions {
+    $p_dir_name: p#{$cls};
+    $m_dir_name: m#{$cls};
+
+    @if $spacer != "" {
+      $p_dir_name: p#{$cls}_#{$spacer};
+      $m_dir_name: m#{$cls}_#{$spacer};
+    }
+
+    %#{$p_dir_name} {
+      padding-#{$dir}: $size;
+    }
+
+    %#{$m_dir_name} {
+      margin-#{$dir}: $size;
+    }
+
+    @if $output_classes {
+      .#{$p_dir_name} {
+        @extend %#{$p_dir_name};
+      }
+
+      .#{$m_dir_name} {
+        @extend %#{$m_dir_name};
+      }
+    }
+  }
+}

@@ -361,6 +361,12 @@ $font_family_mono: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
   "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
   "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
+$fonts: (
+  'sans': $font_family_sans,
+  'serif': $font_family_serif,
+  'mono': $font_family_mono
+);
+
 // Font Sizes
 $font_size_base: 1rem !default;
 

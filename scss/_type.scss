@@ -14,3 +14,18 @@
     }
   }
 }
+
+//= Fonts
+@each $name, $family in $fonts {
+  $cls_name: font_#{$name};
+
+  %#{$cls_name} {
+    font-family: $family;
+  }
+
+  @if $output_classes {
+    .#{$cls_name} {
+      @extend %#{$cls_name};
+    }
+  }
+}

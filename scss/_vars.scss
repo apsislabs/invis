@@ -1,0 +1,470 @@
+$output_classes: true !default;
+
+$directions: (
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+  "l": "left"
+) !default;
+
+$corners: (
+  "bl": "bottom-left",
+  "br": "bottom-right",
+  "tl": "top-left",
+  "tr": "top-right"
+) !default;
+
+// Colors
+$black: #000 !default;
+$white: #fff !default;
+
+$gray_1: #f9f9fa !default;
+$gray_2: #dee1e3 !default;
+$gray_3: #bfc5c9 !default;
+$gray_4: #98a1a8 !default;
+$gray_5: #606e79 !default;
+$gray_6: #374047 !default;
+
+$grays: (
+  "gray_1": $gray_1,
+  "gray_2": $gray_2,
+  "gray_3": $gray_3,
+  "gray_4": $gray_4,
+  "gray_5": $gray_5,
+  "gray_6": $gray_6
+) !default;
+
+$blue_1: #f6fafd !default;
+$blue_2: #cce4f5 !default;
+$blue_3: #9bcaeb !default;
+$blue_4: #5aa7de !default;
+$blue_5: #006fbe !default;
+$blue_6: #004170 !default;
+
+$blues: (
+  "blue_1": $blue_1,
+  "blue_2": $blue_2,
+  "blue_3": $blue_3,
+  "blue_4": $blue_4,
+  "blue_5": $blue_5,
+  "blue_6": $blue_6
+) !default;
+
+$indigo_1: #f9f9fe !default;
+$indigo_2: #dddff8 !default;
+$indigo_3: #bcc0f2 !default;
+$indigo_4: #929ae9 !default;
+$indigo_5: #525edc !default;
+$indigo_6: #0516cd !default;
+
+$indigos: (
+  "indigo_1": $indigo_1,
+  "indigo_2": $indigo_2,
+  "indigo_3": $indigo_3,
+  "indigo_4": $indigo_4,
+  "indigo_5": $indigo_5,
+  "indigo_6": $indigo_6
+) !default;
+
+$violet_1: #fbf8fe !default;
+$violet_2: #e8dcf8 !default;
+$violet_3: #d1baf1 !default;
+$violet_4: #b48ee8 !default;
+$violet_5: #864adb !default;
+$violet_6: #4c00b8 !default;
+
+$violets: (
+  "violet_1": $violet_1,
+  "violet_2": $violet_2,
+  "violet_3": $violet_3,
+  "violet_4": $violet_4,
+  "violet_5": $violet_5,
+  "violet_6": $violet_6
+) !default;
+
+$fuschia_1: #fdf8fe !default;
+$fuschia_2: #f5d8f7 !default;
+$fuschia_3: #eab0ef !default;
+$fuschia_4: #dc7be5 !default;
+$fuschia_5: #bb01cc !default;
+$fuschia_6: #72007c !default;
+
+$fuschias: (
+  "fuschia_1": $fuschia_1,
+  "fuschia_2": $fuschia_2,
+  "fuschia_3": $fuschia_3,
+  "fuschia_4": $fuschia_4,
+  "fuschia_5": $fuschia_5,
+  "fuschia_6": $fuschia_6
+) !default;
+
+$pink_1: #fef8fb !default;
+$pink_2: #f7d8ea !default;
+$pink_3: #f0b2d6 !default;
+$pink_4: #e57dba !default;
+$pink_5: #cf0d7e !default;
+$pink_6: #7f004a !default;
+
+$pinks: (
+  "pink_1": $pink_1,
+  "pink_2": $pink_2,
+  "pink_3": $pink_3,
+  "pink_4": $pink_4,
+  "pink_5": $pink_5,
+  "pink_6": $pink_6
+) !default;
+
+$red_1: #fef8f9 !default;
+$red_2: #f8dadc !default;
+$red_3: #f0b5ba !default;
+$red_4: #e6838b !default;
+$red_5: #d2202f !default;
+$red_6: #85000b !default;
+
+$reds: (
+  "red_1": $red_1,
+  "red_2": $red_2,
+  "red_3": $red_3,
+  "red_4": $red_4,
+  "red_5": $red_5,
+  "red_6": $red_6
+) !default;
+
+$orange_1: #fdf9f5 !default;
+$orange_2: #f5dccb !default;
+$orange_3: #eaba98 !default;
+$orange_4: #dd8d54 !default;
+$orange_5: #b54c00 !default;
+$orange_6: #6b2d00 !default;
+
+$oranges: (
+  "orange_1": $orange_1,
+  "orange_2": $orange_2,
+  "orange_3": $orange_3,
+  "orange_4": $orange_4,
+  "orange_5": $orange_5,
+  "orange_6": $orange_6
+) !default;
+
+$yellow_1: #fbfaec !default;
+$yellow_2: #eae398 !default;
+$yellow_3: #d5c72c !default;
+$yellow_4: #b0a200 !default;
+$yellow_5: #776e00 !default;
+$yellow_6: #464000 !default;
+
+$yellows: (
+  "yellow_1": $yellow_1,
+  "yellow_2": $yellow_2,
+  "yellow_3": $yellow_3,
+  "yellow_4": $yellow_4,
+  "yellow_5": $yellow_5,
+  "yellow_6": $yellow_6
+) !default;
+
+$lime_1: #f6fcee !default;
+$lime_2: #cbec9e !default;
+$lime_3: #94d736 !default;
+$lime_4: #68b300 !default;
+$lime_5: #477900 !default;
+$lime_6: #294700 !default;
+
+$limes: (
+  "lime_1": $lime_1,
+  "lime_2": $lime_2,
+  "lime_3": $lime_3,
+  "lime_4": $lime_4,
+  "lime_5": $lime_5,
+  "lime_6": $lime_6
+) !default;
+
+$green_1: #f2fcf1 !default;
+$green_2: #b6efb1 !default;
+$green_3: #61dd56 !default;
+$green_4: #0fb900 !default;
+$green_5: #0b7e00 !default;
+$green_6: #064a00 !default;
+
+$greens: (
+  "green_1": $green_1,
+  "green_2": $green_2,
+  "green_3": $green_3,
+  "green_4": $green_4,
+  "green_5": $green_5,
+  "green_6": $green_6
+) !default;
+
+$teal_1: #f1fcf6 !default;
+$teal_2: #afefc9 !default;
+$teal_3: #52dc8b !default;
+$teal_4: #00b84d !default;
+$teal_5: #007d34 !default;
+$teal_6: #004a1f !default;
+
+$teals: (
+  "teal_1": $teal_1,
+  "teal_2": $teal_2,
+  "teal_3": $teal_3,
+  "teal_4": $teal_4,
+  "teal_5": $teal_5,
+  "teal_6": $teal_6
+) !default;
+
+$cyan_1: #f0fcfb !default;
+$cyan_2: #a8eee8 !default;
+$cyan_3: #40d9cc !default;
+$cyan_4: #00b3a4 !default;
+$cyan_5: #007a70 !default;
+$cyan_6: #004842 !default;
+
+$cyans: (
+  "cyan_1": $cyan_1,
+  "cyan_2": $cyan_2,
+  "cyan_3": $cyan_3,
+  "cyan_4": $cyan_4,
+  "cyan_5": $cyan_5,
+  "cyan_6": $cyan_6
+) !default;
+
+$colors: (
+  "gray": $grays,
+  "blue": $blues,
+  "indigo": $indigos,
+  "violet": $violets,
+  "fuschia": $fuschias,
+  "pink": $pinks,
+  "red": $reds,
+  "orange": $oranges,
+  "yellow": $yellows,
+  "lime": $limes,
+  "green": $greens,
+  "teal": $teals,
+  "cyan": $cyans
+) !default;
+
+// Screen Sizes
+$screen_size_sm: 640px !default;
+$screen_size_md: 768px !default;
+$screen_size_lg: 1024px !default;
+$screen_size_xl: 1280px !default;
+
+// Spacing
+$spacing_base: 1rem !default;
+$spacing_px: 1px !default;
+
+$spacing_0: 0 !default;
+$spacing_1: $spacing_base * 0.25 !default;
+$spacing_2: $spacing_base * 0.5 !default;
+$spacing_3: $spacing_base * 0.75 !default;
+$spacing_4: $spacing_base !default;
+$spacing_5: $spacing_base * 1.25 !default;
+$spacing_6: $spacing_base * 1.5 !default;
+$spacing_8: $spacing_base * 2 !default;
+$spacing_10: $spacing_base * 2.5 !default;
+$spacing_12: $spacing_base * 3 !default;
+$spacing_16: $spacing_base * 4 !default;
+$spacing_20: $spacing_base * 5 !default;
+$spacing_24: $spacing_base * 6 !default;
+$spacing_32: $spacing_base * 8 !default;
+$spacing_40: $spacing_base * 10 !default;
+$spacing_48: $spacing_base * 12 !default;
+$spacing_56: $spacing_base * 14 !default;
+$spacing_64: $spacing_base * 16 !default;
+
+// Border Widths
+$border_width_base: 1px !default;
+$border_width_sm: $border_width_base * 0.5 !default;
+$border_width_md: $border_width_base !default;
+$border_width_lg: $border_width_base * 1.5 !default;
+
+$border_width_0: 0 !default;
+$border_width_2: 2px !default;
+$border_width_4: 4px !default;
+$border_width_8: 8px !default;
+
+$border_styles: (
+  "solid": solid,
+  "dashed": dashed,
+  "dotted": dotted,
+  "double": double,
+  "none": none
+) !default;
+
+$border_widths: (
+  "none": $border_width_0,
+  "base": $border_width_base,
+  "sm": $border_width_sm,
+  "md": $border_width_md,
+  "lg": $border_width_lg,
+  "0": $border_width_0,
+  "2": $border_width_2,
+  "4": $border_width_4,
+  "8": $border_width_8
+) !default;
+
+// Border Radius
+$border_radius_base: 0.25rem !default;
+$border_radius_none: $border_radius_base * 0 !default;
+$border_radius_sm: $border_radius_base * 0.5 !default;
+$border_radius_md: $border_radius_base * 1.5 !default;
+$border_radius_lg: $border_radius_base * 2 !default;
+$border_radius_full: 9999px !default;
+
+$radiuses: (
+  "base": $border_radius_base,
+  "none": $border_radius_none,
+  "sm": $border_radius_sm,
+  "md": $border_radius_md,
+  "lg": $border_radius_lg,
+  "full": $border_radius_full
+) !default;
+
+// Font Families
+$font_family_sans: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans",
+  "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed",
+  "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue",
+  Helvetica, Arial, sans-serif;
+
+$font_family_serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif",
+  Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia,
+  serif;
+
+$font_family_mono: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+  "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+// Font Sizes
+$font_size_base: 1rem !default;
+
+$font_size_xs: $font_size_base * 0.75 !default;
+$font_size_sm: $font_size_base * 0.875 !default;
+$font_size_lg: $font_size_base * 1.125 !default;
+$font_size_xl: $font_size_base * 1.25 !default;
+$font_size_2xl: $font_size_base * 1.5 !default;
+$font_size_3xl: $font_size_base * 1.875 !default;
+$font_size_4xl: $font_size_base * 2.25 !default;
+$font_size_5xl: $font_size_base * 3 !default;
+$font_size_6xl: $font_size_base * 4 !default;
+
+// Font Weights
+$font_weight_hairline: 100 !default;
+$font_weight_thin: 200 !default;
+$font_weight_light: 300 !default;
+$font_weight_normal: 400 !default;
+$font_weight_medium: 500 !default;
+$font_weight_semibold: 600 !default;
+$font_weight_bold: 700 !default;
+$font_weight_extrabold: 800 !default;
+$font_weight_black: 900 !default;
+
+// Transitions
+$transition_duration_base: 100ms !default;
+$transition_duration_fast: $transition_duration_base * 0.5 !default;
+$transition_duration_slow: $transition_duration_base * 1.5 !default;
+
+$transition_duration_75: 75ms !default;
+$transition_duration_100: 100ms !default;
+$transition_duration_150: 150ms !default;
+$transition_duration_200: 200ms !default;
+$transition_duration_300: 300ms !default;
+$transition_duration_500: 500ms !default;
+$transition_duration_700: 700ms !default;
+$transition_duration_1000: 1000ms !default;
+
+$transition_base: ease-in-out !default;
+$transition_linear: linear !default;
+$transition_in: cubic-bezier(0.4, 0, 1, 1) !default;
+$transition_out: cubic-bezier(0, 0, 0.2, 1) !default;
+$transition_in_out: cubic-bezier(0.4, 0, 0.2, 1) !default;
+
+$transition_prop_all: all !default;
+$transition_prop_none: none !default;
+$transition_prop_all: all !default;
+$transition_prop_default: background-color, border-color, color, fill, stroke,
+  opacity, box-shadow, transform !default;
+$transition_prop_colors: background-color, border-color, color, fill, stroke !default;
+$transition_prop_opacity: opacity !default;
+$transition_prop_shadow: box-shadow !default;
+$transition_prop_transform: transform !default;
+
+// Z-Index
+$zindex_auto: auto !default;
+$zindex_0: 0 !default;
+$zindex_10: 10 !default;
+$zindex_20: 20 !default;
+$zindex_30: 30 !default;
+$zindex_40: 40 !default;
+$zindex_50: 50 !default;
+
+// Letter Spacing
+$letter_spacing_tighter: -0.05em !default;
+$letter_spacing_tight: -0.025em !default;
+$letter_spacing_base: 0 !default;
+$letter_spacing_wide: 0.025em !default;
+$letter_spacing_wider: 0.05em !default;
+$letter_spacing_widest: 0.1em !default;
+
+// Line Height
+$line_height_none: 1 !default;
+$line_height_tight: 1.25 !default;
+$line_height_snug: 1.375 !default;
+$line_height_normal: 1.5 !default;
+$line_height_relaxed: 1.625 !default;
+$line_height_loose: 2 !default;
+$line_height_3: 0.75rem !default;
+$line_height_4: 1rem !default;
+$line_height_5: 1.25rem !default;
+$line_height_6: 1.5rem !default;
+$line_height_7: 1.75rem !default;
+$line_height_8: 2rem !default;
+$line_height_9: 2.25rem !default;
+$line_height_10: 2.5rem !default;
+
+// Box Shadow
+$box_shadow_offset_x_base: 0 !default;
+$box_shadow_offset_x_xs: $box_shadow_offset_x_base * 0.15 !default;
+$box_shadow_offset_x_sm: $box_shadow_offset_x_base * 0.5 !default;
+$box_shadow_offset_x_lg: $box_shadow_offset_x_base * 1.5 !default;
+$box_shadow_offset_x_xl: $box_shadow_offset_x_base * 2 !default;
+
+$box_shadow_offset_y_base: 1px !default;
+$box_shadow_offset_y_xs: $box_shadow_offset_y_base * 0.15 !default;
+$box_shadow_offset_y_sm: $box_shadow_offset_y_base * 0.5 !default;
+$box_shadow_offset_y_lg: $box_shadow_offset_y_base * 1.5 !default;
+$box_shadow_offset_y_xl: $box_shadow_offset_y_base * 2 !default;
+
+$box_shadow_blur_base: 2px !default;
+$box_shadow_blur_xs: $box_shadow_blur_base * 0.15 !default;
+$box_shadow_blur_sm: $box_shadow_blur_base * 0.5 !default;
+$box_shadow_blur_lg: $box_shadow_blur_base * 1.5 !default;
+$box_shadow_blur_xl: $box_shadow_blur_base * 2 !default;
+
+$box_shadow_spread_base: 0 !default;
+$box_shadow_spread_xs: $box_shadow_spread_base * 0.15 !default;
+$box_shadow_spread_sm: $box_shadow_spread_base * 0.5 !default;
+$box_shadow_spread_lg: $box_shadow_spread_base * 1.5 !default;
+$box_shadow_spread_xl: $box_shadow_spread_base * 2 !default;
+
+$box_shadow_color: rgba(0, 0, 0, 0.05) !default;
+
+$box_shadow_none: none !default;
+
+$box_shadow_base: $box_shadow_offset_x_base $box_shadow_offset_y_base
+  $box_shadow_blur_base $box_shadow_spread_base $box_shadow_color !default;
+$box_shadow_xs: $box_shadow_offset_x_xs $box_shadow_offset_y_xs
+  $box_shadow_blur_xs $box_shadow_spread_xs $box_shadow_color !default;
+$box_shadow_sm: $box_shadow_offset_x_sm $box_shadow_offset_y_sm
+  $box_shadow_blur_sm $box_shadow_spread_sm $box_shadow_color !default;
+$box_shadow_lg: $box_shadow_offset_x_lg $box_shadow_offset_y_lg
+  $box_shadow_blur_lg $box_shadow_spread_lg $box_shadow_color !default;
+$box_shadow_xl: $box_shadow_offset_x_xl $box_shadow_offset_y_xl
+  $box_shadow_blur_xl $box_shadow_spread_lg $box_shadow_color !default;
+
+$box_shadow_inner: inset $box_shadow_base !default;
+
+// Opacity
+$opacity_0: 0 !default;
+$opacity_25: 0.25 !default;
+$opacity_50: 0.5 !default;
+$opacity_75: 0.75 !default;
+$opacity_100: 1 !default;

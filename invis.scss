@@ -1,0 +1,10 @@
+// External CSS
+@import "./scss/normalize";
+
+@import "./scss/vars";
+@import "./scss/borders";
+
+
+.border-lime {
+    @extend %border_lime_1;
+}

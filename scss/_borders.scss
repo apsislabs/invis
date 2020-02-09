@@ -1,0 +1,79 @@
+@use "./vars";
+
+//= Border Colors
+@each $color, $color_map in $colors {
+  @each $name, $hex in $color_map {
+    %border_#{$name} {
+      border-color: $hex;
+    }
+
+    @if $output_classes {
+      .border_#{$name} {
+        @extend %border_#{$name};
+      }
+    }
+  }
+}
+
+//= Border Styles
+@each $name, $style in $border_styles {
+  %border_#{$name} {
+    border-style: $style;
+  }
+
+  @if $output_classes {
+    .border_#{$name} {
+      @extend %border_#{$name};
+    }
+  }
+}
+
+//= Border Width
+@each $name, $width in $border_widths {
+  %border_#{$name} {
+    border-width: $width;
+  }
+
+  @if $output_classes {
+    .border_#{$name} {
+      @extend %border_#{$name};
+    }
+  }
+
+  @each $cls, $dir in $directions {
+    %border_#{$cls}_#{$name} {
+      border-#{$dir}-width: $width;
+    }
+
+    @if $output_classes {
+      .border_#{$cls}_#{$name} {
+        @extend %border_#{$cls}_#{$name};
+      }
+    }
+  }
+}
+
+//= Border Radius
+@each $name, $radius in $radiuses {
+  %radius_#{$name} {
+    border-radius: $radius;
+  }
+
+  @if $output_classes {
+    .radius_#{$name} {
+      @extend %radius_#{$name};
+    }
+  }
+
+  @each $cls, $dir in $corners {
+    %radius_#{$cls}_#{$name} {
+      border-#{$dir}-radius: $radius;
+    }
+
+    @if $output_classes {
+      .radius_#{$cls}_#{$name} {
+        @extend %radius_#{$cls}_#{$name};
+      }
+    }
+  }
+}

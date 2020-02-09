@@ -484,9 +484,27 @@ $box_shadow_xl: $box_shadow_offset_x_xl $box_shadow_offset_y_xl
 
 $box_shadow_inner: inset $box_shadow_base !default;
 
+$shadows: (
+  "": $box_shadow_base,
+  "none": $box_shadow_none,
+  "inner": $box_shadow_inner,
+  "xs": $box_shadow_xs,
+  "sm": $box_shadow_sm,
+  "lg": $box_shadow_lg,
+  "xl": $box_shadow_xl
+) !default;
+
 // Opacity
 $opacity_0: 0 !default;
 $opacity_25: 0.25 !default;
 $opacity_50: 0.5 !default;
 $opacity_75: 0.75 !default;
 $opacity_100: 1 !default;
+
+$opacities: (
+  "0": $opacity_0,
+  "25": $opacity_25,
+  "50": $opacity_50,
+  "75": $opacity_75,
+  "100": $opacity_100
+) !default;

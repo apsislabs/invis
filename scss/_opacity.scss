@@ -1,0 +1,11 @@
+@each $cls_name, $opacity in $opacities {
+  %opacity_#{$cls_name} {
+    opacity: $opacity;
+  }
+
+  @if $output_classes {
+    .opacity_#{$cls_name} {
+      @extend %opacity_#{$cls_name};
+    }
+  }
+}

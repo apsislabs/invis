@@ -1,0 +1,17 @@
+@each $name, $shadow in $shadows {
+  $cls_name: shadow;
+
+  @if $name != "" {
+    $cls_name: shadow_#{$name};
+  }
+
+  %#{$cls_name} {
+    box-shadow: $shadow;
+  }
+
+  @if $output_classes {
+    .#{$cls_name} {
+      @extend %#{$cls_name};
+    }
+  }
+}

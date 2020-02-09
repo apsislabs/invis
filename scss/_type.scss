@@ -1,0 +1,16 @@
+//= Colors
+@each $color, $color_map in $colors {
+  @each $name, $hex in $color_map {
+    $cls_name: text_#{$name};
+
+    %#{$cls_name} {
+      color: $hex;
+    }
+
+    @if $output_classes {
+      .#{$cls_name} {
+        @extend %#{$cls_name};
+      }
+    }
+  }
+}

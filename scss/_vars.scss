@@ -227,6 +227,12 @@ $cyans: (
 ) !default;
 
 $colors: (
+  "black": (
+    "black": $black
+  ),
+  "white": (
+    "white": $white
+  ),
   "gray": $grays,
   "blue": $blues,
   "indigo": $indigos,

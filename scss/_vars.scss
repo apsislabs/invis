@@ -362,10 +362,10 @@ $font_family_mono: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
   "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
 $fonts: (
-  'sans': $font_family_sans,
-  'serif': $font_family_serif,
-  'mono': $font_family_mono
-);
+  "sans": $font_family_sans,
+  "serif": $font_family_serif,
+  "mono": $font_family_mono
+) !default;
 
 // Font Sizes
 $font_size_base: 1rem !default;
@@ -380,6 +380,19 @@ $font_size_4xl: $font_size_base * 2.25 !default;
 $font_size_5xl: $font_size_base * 3 !default;
 $font_size_6xl: $font_size_base * 4 !default;
 
+$font_sizes: (
+  "base": $font_size_base,
+  "xs": $font_size_xs,
+  "sm": $font_size_sm,
+  "lg": $font_size_lg,
+  "xl": $font_size_xl,
+  "2xl": $font_size_2xl,
+  "3xl": $font_size_3xl,
+  "4xl": $font_size_4xl,
+  "5xl": $font_size_5xl,
+  "6xl": $font_size_6xl
+) !default;
+
 // Font Weights
 $font_weight_hairline: 100 !default;
 $font_weight_thin: 200 !default;
@@ -390,6 +403,18 @@ $font_weight_semibold: 600 !default;
 $font_weight_bold: 700 !default;
 $font_weight_extrabold: 800 !default;
 $font_weight_black: 900 !default;
+
+$font_weights: (
+  "hairline": $font_weight_hairline,
+  "thin": $font_weight_thin,
+  "light": $font_weight_light,
+  "normal": $font_weight_normal,
+  "medium": $font_weight_medium,
+  "semibold": $font_weight_semibold,
+  "bold": $font_weight_bold,
+  "extrabold": $font_weight_extrabold,
+  "black": $font_weight_black
+) !default;
 
 // Transitions
 $transition_duration_base: 100ms !default;
@@ -438,6 +463,15 @@ $letter_spacing_wide: 0.025em !default;
 $letter_spacing_wider: 0.05em !default;
 $letter_spacing_widest: 0.1em !default;
 
+$letter_spacings: (
+  "tighter": $letter_spacing_tighter,
+  "tight": $letter_spacing_tight,
+  "base": $letter_spacing_base,
+  "wide": $letter_spacing_wide,
+  "wider": $letter_spacing_wider,
+  "widest": $letter_spacing_widest
+) !default;
+
 // Line Height
 $line_height_none: 1 !default;
 $line_height_tight: 1.25 !default;
@@ -453,6 +487,23 @@ $line_height_7: 1.75rem !default;
 $line_height_8: 2rem !default;
 $line_height_9: 2.25rem !default;
 $line_height_10: 2.5rem !default;
+
+$line_heights: (
+  "none": $line_height_none,
+  "tight": $line_height_tight,
+  "snug": $line_height_snug,
+  "normal": $line_height_normal,
+  "relaxed": $line_height_relaxed,
+  "loose": $line_height_loose,
+  "3": $line_height_3,
+  "4": $line_height_4,
+  "5": $line_height_5,
+  "6": $line_height_6,
+  "7": $line_height_7,
+  "8": $line_height_8,
+  "9": $line_height_9,
+  "10": $line_height_10
+) !default;
 
 // Box Shadow
 $box_shadow_offset_x_base: 0 !default;

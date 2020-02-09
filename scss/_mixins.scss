@@ -1,0 +1,11 @@
+@mixin prop($cls_name, $property, $value, $output_classes) {
+  %#{$cls_name} {
+    #{$property}: $value;
+  }
+
+  @if $output_classes {
+    .#{$cls_name} {
+      @extend %#{$cls_name};
+    }
+  }
+}

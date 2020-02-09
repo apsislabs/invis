@@ -15,7 +15,7 @@
   }
 }
 
-//= Fonts
+//= Font Families
 @each $name, $family in $fonts {
   $cls_name: font_#{$name};
 
@@ -28,4 +28,98 @@
       @extend %#{$cls_name};
     }
   }
+}
+
+//= Font Sizes
+@each $name, $size in $font_sizes {
+  $cls_name: text_#{$name};
+
+  %#{$cls_name} {
+    font-size: $size;
+  }
+
+  @if $output_classes {
+    .#{$cls_name} {
+      @extend %#{$cls_name};
+    }
+  }
+}
+
+// Font Styles
+%font_italic {
+  font-style: italic;
+}
+
+%font_normal {
+  font-style: normal;
+}
+
+@if $output_classes {
+  .font_italic {
+    @extend %font_italic;
+  }
+
+  .font_normal {
+    @extend %font_normal;
+  }
+}
+
+// Font Weights
+@each $name, $weight in $font_weights {
+  $cls_name: font_#{$name};
+
+  %#{$cls_name} {
+    font-weight: $weight;
+  }
+
+  @if $output_classes {
+    .#{$cls_name} {
+      @extend %#{$cls_name};
+    }
+  }
+}
+
+// Letter Spacing
+@each $name, $spacing in $letter_spacings {
+  $cls_name: tracking_#{$name};
+
+  %#{$cls_name} {
+    letter-spacing: $spacing;
+  }
+
+  @if $output_classes {
+    .#{$cls_name} {
+      @extend %#{$cls_name};
+    }
+  }
+}
+
+// Line Heights
+@each $name, $spacing in $line_heights {
+  $cls_name: leading_#{$name};
+
+  @include prop($cls_name, line-height, $spacing, $output_classes);
+}
+
+// Text Alignments
+$alignments: (
+  "left": left,
+  "center": center,
+  "right": right,
+  "justify": justify
+);
+@each $name, $alignment in $alignments {
+  $cls_name: text_#{$name};
+  @include prop($cls_name, text-align, $alignment, $output_classes);
+}
+
+// Text Decoration
+$decorations: (
+  "underline": underline,
+  "through": line-through,
+  "none": none
+);
+@each $name, $deco in $decorations {
+  $cls_name: text_#{$name};
+  @include prop($cls_name, text-decoration, $deco, $output_classes);
 }
